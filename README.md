@@ -18,11 +18,17 @@ This repository implements an accelerated hazards (AH) model for clustered multi
 - weighted estimating equation estimation;
 - multiplier resampling-based variance estimation.
 
-The model can be written as:
+## Model
 
-lambda_ijkr(t | Z_ikr) = lambda_0r(t exp(beta^T Z_ikr))
+The accelerated hazards model is defined as:
 
-where r denotes the event type and each event type has its own baseline hazard function.
+$$
+\lambda_{ijkr}(t \mid Z_{ikr})
+=
+\lambda_{0r}\left(t\exp(\beta^{T}Z_{ikr})\right)
+$$
+
+where $r$ denotes the event type and each event type has its own baseline hazard function.
 
 ---
 
