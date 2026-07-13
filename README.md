@@ -33,13 +33,14 @@ where r denotes the event type and each event type has its own baseline hazard f
 The repository is organized as follows:
 
 
-AH-Clustered-MultiType-Recurrent-GapTime/
 
 Simulation/
 Simulation studies
 
 Simulation1/
 Simulation and application studies
+
+
 README.md
 
 LICENSE
