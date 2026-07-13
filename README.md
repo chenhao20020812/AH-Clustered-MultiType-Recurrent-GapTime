@@ -6,9 +6,9 @@ This repository provides MATLAB code for a semiparametric accelerated hazards mo
 
 Overview
 
-Recurrent event data are frequently observed in medical studies, reliability studies, and other longitudinal applications. In many situations, subjects may experience multiple recurrent events, different event types, and within-cluster dependence.
+Recurrent event data frequently arise in medical studies and longitudinal follow-up studies, where subjects may experience multiple events over time. These data may contain multiple event types and within-cluster dependence.
 
-This repository implements an accelerated hazards (AH) model for clustered multi-type recurrent gap-time data. The proposed framework allows:
+This repository implements an accelerated hazards (AH) model for clustered multi-type recurrent gap-time data. The framework allows:
 
 clustered recurrent gap-time observations;
 multiple event types with type-specific baseline hazard functions;
@@ -38,25 +38,27 @@ ikr
 
 )),
 
-where $r$ represents the event type and each event type has its own baseline hazard function.
+where $r$ denotes the event type and each event type has its own baseline hazard function.
 
 Repository Structure
 AH-Clustered-MultiType-Recurrent-GapTime/
 
 ├── Simulation/
-│   ├── Simulation data generation
+│   ├── Data generation
 │   ├── Parameter estimation
 │   └── Simulation experiments
 │
 ├── Application_MIMIC/
 │   ├── MIMIC-IV real-data application
-│   └── Baseline hazard estimation and confidence intervals
+│   └── Baseline cumulative hazard estimation
 │
 ├── Functions/
-│   ├── Estimation functions
+│   ├── Regression parameter estimation
 │   ├── Score functions
 │   ├── Variance estimation
 │   └── Auxiliary functions
+│
+├── Figures/
 │
 ├── README.md
 │
@@ -72,9 +74,9 @@ Recommended MATLAB toolboxes:
 Statistics and Machine Learning Toolbox
 Parallel Computing Toolbox (for parallel multiplier resampling)
 Main Functions
-Parameter Estimation
+Regression Parameter Estimation
 
-The regression coefficient is estimated by solving weighted estimating equations:
+The regression parameter is estimated by solving weighted estimating equations:
 
 U(β)=0.
 
@@ -84,11 +86,11 @@ estimate_beta_AH_multi.m
 
 score_AH_multi.m
 
-These functions implement estimation of regression parameters for clustered recurrent gap-time data with multiple event types.
+These functions implement estimation of regression coefficients for clustered recurrent gap-time data with multiple event types.
 
 Baseline Cumulative Hazard Estimation
 
-For each event type, the baseline cumulative hazard function is estimated by:
+For each event type, the baseline cumulative hazard function is estimated as:
 
 Λ
 0r
@@ -113,7 +115,15 @@ The method allows each event type to have its own baseline cumulative hazard fun
 
 Variance Estimation
 
-The variance of the estimator is obtained using multiplier resampling.
+The uncertainty of the estimator is obtained using multiplier resampling.
+
+The resampling procedure generates cluster-level random multipliers to approximate the sampling distribution of:
+
+β
+^
+	​
+
+.
 
 Main functions:
 
@@ -127,7 +137,7 @@ Simulation Studies
 
 Simulation studies are conducted to evaluate the finite-sample performance of the proposed estimator.
 
-The simulation investigates:
+The simulation evaluates:
 
 Bias;
 Empirical standard error;
@@ -164,7 +174,7 @@ https://physionet.org/content/mimiciv/
 Access requires:
 
 a PhysioNet account;
-completion of the required training;
+completion of required training;
 approval of data access credentials.
 
 The raw MIMIC-IV data are not included in this repository due to data usage restrictions.
@@ -172,8 +182,11 @@ The raw MIMIC-IV data are not included in this repository due to data usage rest
 How to Run
 Simulation
 Add all folders to the MATLAB path.
-Run:
+Run the simulation program:
 main.m
+
+The program will generate recurrent gap-time data, estimate regression parameters, and evaluate estimator performance.
+
 MIMIC-IV Application
 Download and preprocess the MIMIC-IV dataset.
 Modify the data path in:
