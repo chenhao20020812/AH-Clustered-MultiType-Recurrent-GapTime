@@ -161,8 +161,13 @@ main.m
 
 Download and preprocess the MIMIC-IV dataset, then modify the data path in the application script:
 
+application1.m
+
+modelcheck_MIMIC_AH_betaStar_parallel.m
 
 application_MIMIC_AH_type123_baseline_CI.m
+
+three_baseline.m
 
 
 ---
@@ -171,7 +176,7 @@ application_MIMIC_AH_type123_baseline_CI.m
 
 If you use this code, please cite:
 
-Chen, Hao.
+Jin, Jin and Chen, Hao.
 
 *An Accelerated Hazards Model for Clustered Multi-Type Recurrent Gap-Time Data.*
 
