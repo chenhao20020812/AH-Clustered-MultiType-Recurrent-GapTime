@@ -24,3 +24,29 @@ The accelerated hazards model is defined as
 \lambda_{ijkr}(t|Z_{ikr})
 =
 \lambda_{0r}(t\exp(\beta^T Z_{ikr}))
+where $r$ denotes the event type and each event type has its own baseline hazard function.
+Repository Structure
+
+The repository is organized as follows:
+AH-Clustered-MultiType-Recurrent-GapTime/
+
+├── Simulation/
+│   ├── Data generation
+│   ├── Parameter estimation
+│   └── Simulation experiments
+│
+├── Application_MIMIC/
+│   ├── MIMIC-IV real-data application
+│   └── Baseline cumulative hazard estimation
+│
+├── Functions/
+│   ├── Regression parameter estimation
+│   ├── Score functions
+│   ├── Variance estimation
+│   └── Auxiliary functions
+│
+├── Figures/
+│
+├── README.md
+│
+└── LICENSE
