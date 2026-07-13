@@ -132,14 +132,14 @@ The MIMIC-IV data are not included in this repository due to data access restric
 Application codes are provided in:
 
 
-Application_MIMIC/
+Simulation1/
 
 
 ---
 
 ## Data Availability
 
-The MIMIC-IV dataset is publicly available through PhysioNet:
+The MIMIC-IV dataset is available through PhysioNet:
 
 https://physionet.org/content/mimiciv/
 
