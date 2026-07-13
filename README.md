@@ -38,12 +38,8 @@ AH-Clustered-MultiType-Recurrent-GapTime/
 Simulation/
 Simulation studies
 
-Application_MIMIC/
-MIMIC-IV real-data analysis
-
-Functions/
-Model estimation and inference functions
-
+Simulation1/
+Simulation and application studies
 README.md
 
 LICENSE
