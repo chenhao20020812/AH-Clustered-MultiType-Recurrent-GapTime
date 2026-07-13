@@ -22,13 +22,9 @@ This repository implements an accelerated hazards (AH) model for clustered multi
 
 The accelerated hazards model is defined as:
 
-$$
-\lambda_{ijkr}(t \mid Z_{ikr})
-=
-\lambda_{0r}\left(t\exp(\beta^{T}Z_{ikr})\right)
-$$
+λ<sub>ijkr</sub>(t | Z<sub>ikr</sub>) = λ<sub>0r</sub>(t exp(β<sup>T</sup>Z<sub>ikr</sub>))
 
-where $r$ denotes the event type and each event type has its own baseline hazard function.
+where r denotes the event type and each event type has its own baseline hazard function.
 
 ---
 
