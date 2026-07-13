@@ -20,43 +20,7 @@ This repository implements an accelerated hazards (AH) model for clustered multi
 
 The accelerated hazards model is defined as
 
-$$
-\lambda_{ijkr}(t \mid Z_{ikr})
+```math
+\lambda_{ijkr}(t|Z_{ikr})
 =
-\lambda_{0r}
-\left(
-t\exp(\beta^{T}Z_{ikr})
-\right).
-$$
-
-where $r$ denotes the event type and each event type has its own baseline hazard function.
-
----
-
-# Repository Structure
-
-The repository is organized as follows:
-
-```text
-AH-Clustered-MultiType-Recurrent-GapTime/
-
-├── Simulation/
-│   ├── Data generation
-│   ├── Parameter estimation
-│   └── Simulation experiments
-│
-├── Application_MIMIC/
-│   ├── MIMIC-IV real-data application
-│   └── Baseline cumulative hazard estimation
-│
-├── Functions/
-│   ├── Regression parameter estimation
-│   ├── Score functions
-│   ├── Variance estimation
-│   └── Auxiliary functions
-│
-├── Figures/
-│
-├── README.md
-│
-└── LICENSE
+\lambda_{0r}(t\exp(\beta^T Z_{ikr}))
