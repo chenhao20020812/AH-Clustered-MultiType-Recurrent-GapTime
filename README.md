@@ -35,10 +35,10 @@ The repository is organized as follows:
 
 
 Simulation/
-Simulation studies
+Simulation studies for type1 and type3
 
 Simulation1/
-Simulation and application studies
+Simulation for others and application studies
 
 
 README.md
