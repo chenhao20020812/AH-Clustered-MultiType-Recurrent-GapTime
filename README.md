@@ -117,7 +117,6 @@ The simulation studies evaluate:
 - Empirical standard error;
 - Estimated standard error;
 - Coverage probability;
-- Baseline cumulative hazard estimation.
 
 ---
 
