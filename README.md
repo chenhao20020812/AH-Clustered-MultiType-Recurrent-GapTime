@@ -25,6 +25,7 @@ The accelerated hazards model is defined as
 =
 \lambda_{0r}(t\exp(\beta^T Z_{ikr}))
 where $r$ denotes the event type and each event type has its own baseline hazard function.
+---
 Repository Structure
 
 The repository is organized as follows:
